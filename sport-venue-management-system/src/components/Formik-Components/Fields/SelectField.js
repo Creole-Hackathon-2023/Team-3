@@ -15,18 +15,23 @@ const SelectField = (props) => {
         {...field}
         {...props}
       >
-        <option value="" label="Select a Roll" className="p-1">
-          Select a language
+        <option
+          value=""
+          label="Select a Roll"
+          className="p-1"
+          placeholder="Select a Roll"
+        >
+          Select a roll
         </option>
         {userRolls.map((user) => (
           <option value={user} label={user} key={user}>
             {user}
           </option>
         ))}
-        <div className="mt-1 mb-1">
-          <ErrorMessage name={field.name} component="div" className="p-2 " />
-        </div>
       </Form.Select>
+      <div className="text-danger bg-light rounded p-1 error-text">
+        <ErrorMessage name={field.name} component="div" />
+      </div>
     </>
   );
 };

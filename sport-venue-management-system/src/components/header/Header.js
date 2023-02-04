@@ -1,21 +1,29 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand href="#">SVMS</Navbar.Brand>
+      <Navbar.Brand>
+        <Link to="/" className="nav-text">
+          SVMS
+        </Link>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link href="#">Test</Nav.Link>
         </Nav>
         <Nav>
-          <Nav.Link href="#">Login</Nav.Link>
-          <Nav.Link eventKey={2} href="#memes">
+          <Link to="/signin" className="nav-link nav-text">
+            Login
+          </Link>
+          <Link to="/signup" className="nav-link nav-text">
             SignUp
-          </Nav.Link>
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

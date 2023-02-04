@@ -6,9 +6,17 @@ import TextField from "../../Formik-Components/Fields/TextFields";
 
 import { userSignupSchema } from "../../../Validators/signUpValidatior";
 import SelectField from "../../Formik-Components/Fields/SelectField";
+import "./Signup.css";
 
 const SignUp = () => {
-  const signupuser = async (values) => {
+  const initialValues = {
+    username: "",
+    email: "",
+    password: "",
+    roll: "",
+  };
+
+  const signupuser = (values) => {
     try {
       console.log(values);
     } catch (error) {
@@ -21,19 +29,13 @@ const SignUp = () => {
       <Row>
         <Col></Col>
         <Formik
-          initialValues={{
-            username: "",
-            email: "",
-            password: "",
-            roll: "user",
-          }}
+          initialValues={initialValues}
           validationSchema={userSignupSchema}
           onSubmit={(values) => {
-            // console.log(values);
             signupuser(values);
           }}
         >
-          {(formik) => (
+          {({ values, errors }) => (
             <FormikForm className="w-50 mt-5">
               <Form.Group className="mb-3">
                 <Form.Label>Username</Form.Label>
@@ -43,7 +45,7 @@ const SignUp = () => {
                   type="text"
                   placeholder="Enter Username"
                 />
-              </Form.Group>{" "}
+              </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
 
@@ -69,9 +71,6 @@ const SignUp = () => {
               <Form.Group className="mb-3 " controlId="formBasicPassword">
                 <Button variant="primary" type="submit">
                   Submit
-                </Button>
-                <Button className="ms-3" variant="primary" type="reset">
-                  Reset
                 </Button>
               </Form.Group>
             </FormikForm>

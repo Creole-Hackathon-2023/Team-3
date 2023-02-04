@@ -12,5 +12,5 @@ export const userSignupSchema = yup.object().shape({
     .min(8, "Password length Must be 8 or more")
     .max(16, "Password length Must be 16 or less")
     .required("Password is required"),
-  roll: yup.string().required("Password is required"),
+  roll: yup.string().required("Roll is required"),
 });

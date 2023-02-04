@@ -1,6 +1,8 @@
 import React from "react";
 import { Route, Routes, Outlet, Navigate } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/home";
+import UserSignup from "./pages/userSignup";
+import UserLogin from "./pages/userLogin";
 
 const PrivateRoute = () => {
   const user = localStorage.getItem("user");
@@ -16,6 +18,8 @@ function Router() {
         <Route exact path="/user" element={<h1>User Secure Page</h1>} />
       </Route>
       <Route exact path="/" element={<Home />} />
+      <Route exact path="/signup" element={<UserSignup />} />
+      <Route exact path="/signin" element={<UserLogin />} />
       <Route exact path="/*" element={<h2>404 Not Found</h2>} />
     </Routes>
   );
