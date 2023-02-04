@@ -1,0 +1,37 @@
+.venue1, .venue2, .venue3 {
+    margin:auto;
+    margin-top: 1cm;
+    border: 0.1cm solid black;
+    border-radius: 1cm;
+    width: 25cm;
+    height: 8cm;
+  }
+  .venueHeading1, .venueHeading2, .venueHeading3{
+    width: 100%;
+    height: 20%;
+    background-color: #42cbf5;
+    border-top-left-radius: 0.9cm;
+    border-top-right-radius: 0.9cm;
+    text-align: center;
+    border-bottom: 0.1cm solid black;
+    color: black;
+
+  }
+.Details1, .Details2, .Details3{
+  text-align: left;
+  padding: 2%;
+}
+mark {
+background-color: green !important;
+color: white;
+padding: 3px !important;
+}
+.button1{
+  background-color: black;
+  color: white;
+}
+
+.two{
+  display: flex;
+  justify-content: flex-end;
+}
