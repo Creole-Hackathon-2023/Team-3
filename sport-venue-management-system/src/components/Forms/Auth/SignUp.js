@@ -6,9 +6,12 @@ import TextField from "../../Formik-Components/Fields/TextFields";
 
 import { userSignupSchema } from "../../../Validators/signUpValidatior";
 import SelectField from "../../Formik-Components/Fields/SelectField";
+import { createUser } from "../../../services/Services";
+import { useNavigate } from "react-router-dom";
 import "./Signup.css";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const initialValues = {
     username: "",
     email: "",
@@ -17,11 +20,8 @@ const SignUp = () => {
   };
 
   const signupuser = (values) => {
-    try {
-      console.log(values);
-    } catch (error) {
-      console.log("error");
-    }
+    createUser(values);
+    navigate("/");
   };
 
   return (

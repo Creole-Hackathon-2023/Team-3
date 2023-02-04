@@ -3,16 +3,25 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Formik, Form as FormikForm } from "formik";
 import TextField from "../../Formik-Components/Fields/TextFields";
+import { getUsers } from "../../../services/Services";
+import { setStorageItem } from "../../../config";
+import { useNavigate } from "react-router-dom";
 
 import { userLoginSchema } from "../../../Validators/signInValidators";
 
 const SignIn = () => {
-  const signinuser = async (values) => {
-    try {
-      console.log(values);
-    } catch (error) {
-      console.log("error");
-    }
+  const navigate = useNavigate();
+  const signinuser = (values) => {
+    getUsers().then((res) => {
+      if (res.status === 200) {
+        const user = res.data.find(
+          (user) =>
+            user.email === values.email && user.password === values.password
+        );
+        setStorageItem(JSON.stringify(setStorageItem("user", user)));
+        navigate("/dashboard");
+      }
+    });
   };
 
   return (

@@ -5,9 +5,11 @@ import UserSignup from "./pages/userSignup";
 import UserLogin from "./pages/userLogin";
 import Error from "./pages/Error";
 
+import Dashboard from "./pages/dashboard";
+import { getStorageItem } from "./config";
 
 const PrivateRoute = () => {
-  const user = localStorage.getItem("user");
+  const user = getStorageItem("user");
   const auth = { token: user ? true : false };
 
   return auth.token ? <Outlet /> : <Navigate to="/" />;
@@ -17,7 +19,7 @@ function Router() {
   return (
     <Routes>
       <Route element={<PrivateRoute />}>
-        <Route exact path="/user" element={<h1>User Secure Page</h1>} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
       </Route>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/signup" element={<UserSignup />} />
