@@ -18,7 +18,11 @@ const SignIn = () => {
           (user) =>
             user.email === values.email && user.password === values.password
         );
-        setStorageItem(JSON.stringify(setStorageItem("user", user)));
+
+        JSON.stringify(localStorage.setItem("email", user.email));
+        JSON.stringify(localStorage.setItem("password", user.password));
+        JSON.stringify(localStorage.setItem("role", user.role));
+        JSON.stringify(localStorage.setItem("username", user.user_name));
         navigate("/dashboard");
       }
     });

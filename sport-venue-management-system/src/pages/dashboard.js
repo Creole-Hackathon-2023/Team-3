@@ -1,9 +1,16 @@
 import React from "react";
+import UserDashboard from "./userDashboard";
+import OrganizerDashboard from "./organizerDashboard";
 
 function Dashboard() {
+  console.log("ddd", localStorage.getItem("email"));
   return (
     <div>
-      <h1>Dashboard</h1>
+      {localStorage.getItem("role") === "user" ? (
+        <UserDashboard />
+      ) : (
+        <OrganizerDashboard />
+      )}
     </div>
   );
 }

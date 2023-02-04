@@ -10,76 +10,118 @@
     {
       "id": 2,
       "user_name": "Lucy",
-      "password": "Ballmer",
+      "password": "Ballmer123",
       "email": "lucyb56@gmail.com",
       "role": "organizer"
     }
   ],
-     "venue": [
-      {
-        "id": 1,
-        "venue_name": "Turf Sports",
-        "venue_location": "Bodakdev",
-        "is_seatable": false,
-        "venue_image": "rob23@gmail.com",
-        "venue_type": "cricket",
-        "venue_short_description" : "",
-        "venue_long_description" : "",
-        "venue_availabilty" : true,
-        "venue_rating": 9,
-        "venue_capability" : 132000
-      },
-      {
-        "id": 2,
-        "venue_name": "Lucy",
-        "venue_location": "Ballmer",
-        "is_seatable": false,
-        "venue_image": "lucyb56@gmail.com",
-        "venue_type": "rob23@gmail.com",
-        "venue_short_description" : "rob23@gmail.com",
-        "venue_long_description" : "",
-        "venue_availabilty" : false,
-        "venue_rating": 8,
-        "venue_capability" : 0
-      },
-      {
-        "id": 3,
-        "venue_name": "Anna",
-        "venue_location": "Smith",
-        "is_seatable": false,
-        "venue_image": "annasmith23@gmail.com",
-        "venue_type": "rob23@gmail.com",
-        "venue_short_description" : "rob23@gmail.com",
-        "venue_long_description" : "",
-        "venue_availabilty" : true,
-        "venue_rating": 10,
-        "venue_capability" : 0
-      },
-      {
-        "id": 4,
-        "venue_name": "Robert",
-        "venue_location": "Brown",
-        "is_seatable": false,
-        "venue_image": "bobbrown432@yahoo.com",
-        "venue_type": "rob23@gmail.com",
-        "venue_short_description" : "rob23@gmail.com",
-        "venue_long_description" : "",
-        "venue_availabilty" : false,
-        "venue_rating": 7,
-        "venue_capability" : 0
-      },
-      {
-        "id": 5,
-        "venue_name": "Roger",
-        "venue_location": "Bacon",
-        "is_seatable": false,
-        "venue_image": "rogerbacon12@yahoo.com",
-        "venue_type": "rob23@gmail.com",
-        "venue_short_description" : "rob23@gmail.com",
-        "venue_long_description" : "",
-        "venue_availabilty" : false,
-        "venue_rating" : 6,
-        "venue_capability" : 0
-      }
-    ]
-  }
+  "venues": [
+    {
+      "id": 1,
+      "venue_name": "Turf Sports",
+      "venue_location": "Bodakdev",
+      "is_seatable": false,
+      "venue_image": "rob23@gmail.com",
+      "venue_type": "cricket",
+      "venue_short_description": "",
+      "venue_long_description": "",
+      "venue_availabilty": true,
+      "venue_rating": 9,
+      "venue_capability": 132000
+    },
+    {
+      "id": 2,
+      "venue_name": "Lucy",
+      "venue_location": "Ballmer",
+      "is_seatable": false,
+      "venue_image": "lucyb56@gmail.com",
+      "venue_type": "rob23@gmail.com",
+      "venue_short_description": "rob23@gmail.com",
+      "venue_long_description": "",
+      "venue_availabilty": false,
+      "venue_rating": 8,
+      "venue_capability": 0
+    },
+    {
+      "id": 3,
+      "venue_name": "Anna",
+      "venue_location": "Smith",
+      "is_seatable": false,
+      "venue_image": "annasmith23@gmail.com",
+      "venue_type": "rob23@gmail.com",
+      "venue_short_description": "rob23@gmail.com",
+      "venue_long_description": "",
+      "venue_availabilty": true,
+      "venue_rating": 10,
+      "venue_capability": 0
+    },
+    {
+      "id": 4,
+      "venue_name": "Robert",
+      "venue_location": "Brown",
+      "is_seatable": false,
+      "venue_image": "bobbrown432@yahoo.com",
+      "venue_type": "rob23@gmail.com",
+      "venue_short_description": "rob23@gmail.com",
+      "venue_long_description": "",
+      "venue_availabilty": false,
+      "venue_rating": 7,
+      "venue_capability": 0
+    },
+    {
+      "id": 5,
+      "venue_name": "Roger",
+      "venue_location": "Bacon",
+      "is_seatable": false,
+      "venue_image": "rogerbacon12@yahoo.com",
+      "venue_type": "rob23@gmail.com",
+      "venue_short_description": "rob23@gmail.com",
+      "venue_long_description": "",
+      "venue_availabilty": false,
+      "venue_rating": 6,
+      "venue_capability": 0
+    }
+  ],
+
+  "events": [
+    {
+      "id": 1,
+      "event_name": "Box cricket Navrangpura",
+      "event_location": "Bodakdev",
+      "is_seatable": false,
+      "event_image": "rob23@gmail.com",
+      "event_type": "cricket",
+      "event_short_description": "",
+      "event_long_description": "",
+      "event_availabilty": true,
+      "event_rating": 9,
+      "event_capability": 132000
+    },
+    {
+      "id": 2,
+      "event_name": "Internal school football championship",
+      "event_location": "Ballmer",
+      "is_seatable": false,
+      "event_image": "lucyb56@gmail.com",
+      "event_type": "rob23@gmail.com",
+      "event_short_description": "rob23@gmail.com",
+      "event_long_description": "",
+      "event_availabilty": false,
+      "event_rating": 8,
+      "event_capability": 0
+    },
+    {
+      "id": 3,
+      "event_name": "Army Hockey tournament",
+      "event_location": "Smith",
+      "is_seatable": false,
+      "event_image": "annasmith23@gmail.com",
+      "event_type": "rob23@gmail.com",
+      "event_short_description": "rob23@gmail.com",
+      "event_long_description": "",
+      "event_availabilty": true,
+      "event_rating": 10,
+      "event_capability": 0
+    }
+  ]
+}

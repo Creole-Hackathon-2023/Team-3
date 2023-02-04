@@ -9,7 +9,7 @@ import Dashboard from "./pages/dashboard";
 import { getStorageItem } from "./config";
 
 const PrivateRoute = () => {
-  const user = getStorageItem("user");
+  const user = getStorageItem("email");
   const auth = { token: user ? true : false };
 
   return auth.token ? <Outlet /> : <Navigate to="/" />;
